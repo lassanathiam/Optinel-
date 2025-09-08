@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion Globale - Sénégal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Application de Gestion Globale - Sénégal</h1>
+
+    <section>
+        <h2>Créer une facture</h2>
+        <form id="invoice-form">
+            <input type="text" id="client" placeholder="Nom du client" required>
+            <input type="text" id="description" placeholder="Description" required>
+            <input type="number" id="amount" placeholder="Montant (FCFA)" required>
+            <button type="button" onclick="addInvoice()">Ajouter</button>
+        </form>
+        <ul id="invoice-list"></ul>
+    </section>
+
+    <section>
+        <h2>Ajouter une dépense</h2>
+        <form id="expense-form">
+            <input type="text" id="expense-desc" placeholder="Description" required>
+            <input type="number" id="expense-amount" placeholder="Montant (FCFA)" required>
+            <button type="button" onclick="addExpense()">Ajouter</button>
+        </form>
+        <ul id="expense-list"></ul>
+    </section>
+
+    <section>
+        <h2>Gestion du stock</h2>
+        <form id="stock-form">
+            <input type="text" id="product-name" placeholder="Produit" required>
+            <input type="number" id="product-qty" placeholder="Quantité" required>
+            <button type="button" onclick="addStock()">Ajouter</button>
+        </form>
+        <ul id="stock-list"></ul>
+    </section>
+
+    <section>
+        <h2>Suivi du transport</h2>
+        <form id="transport-form">
+            <input type="text" id="vehicle" placeholder="Véhicule" required>
+            <input type="text" id="route" placeholder="Trajet" required>
+            <button type="button" onclick="addTransport()">Ajouter</button>
+        </form>
+        <ul id="transport-list"></ul>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
